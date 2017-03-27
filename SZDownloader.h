@@ -23,7 +23,7 @@ typedef void (^SZDownloadFailBlock)(NSError*error);
 -(void)SZDownloadFail:(NSError*)error;
 @end
 
-@interface SZdownloader : NSObject <NSURLConnectionDataDelegate>
+@interface SZDownloader : NSObject <NSURLConnectionDataDelegate>
 
 //properties
 @property (nonatomic,readonly) NSMutableData* receiveData;

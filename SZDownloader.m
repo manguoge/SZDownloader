@@ -8,7 +8,7 @@
 
 #import "SZDownloader.h"
 
-@interface SZdownloader()
+@interface SZDownloader()
 @property (nonatomic,assign) float receiveBytes;
 @property (nonatomic,assign) float exceptedBytes;
 @property (nonatomic,strong) NSURLRequest *request;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation SZdownloader
+@implementation SZDownloader
 @synthesize receiveData = _receiveData;
 @synthesize request = _request;
 @synthesize connection = _connection;
