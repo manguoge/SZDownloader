@@ -64,46 +64,13 @@ allow 1-5 concurrent download for 1 file (like download manager)
     } onFinished:^(NSData *fileData)
     {
         NSDictionary *jsonDict=[NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableLeaves error:nil];
-        //NSLog(@"jsonDict=%@",jsonDict);
-        NSInteger result = [[jsonDict objectForKey:@"result"] integerValue];
-        _photoArray = [[NSMutableArray alloc]init];
-        NSMutableArray *temArray = [[NSMutableArray alloc]init];
-        int u = 0;
-        if (result == 0)
-        {
-            _photoList = [jsonDict objectForKey:@"photoList"];
-            NSLog(@"photoList-%@",_photoList);
-            for (int i = 0; i<_photoList.count; i++)
-            {
-                NSDictionary *dic = [_photoList objectAtIndex:i];
-                if (u == 0)
-                {
-                    temArray = [[NSMutableArray alloc]init];
-                }
-                [temArray addObject:dic];
-                if (u == 1)
-                {
-                    [_photoArray addObject:temArray];
-                    u =0;continue;
-                }
-                u++;
-                if (i == _photoList.count -1)
-                {
-                    [_photoArray addObject:temArray];
-                    u = 0;
-                }
-            }
-        }
-        NSLog(@"_photoArray.count=%ld",_photoArray.count);
-        [self.tableView reloadData];
+        NSLog(@"jsonDict=%@",jsonDict);
         [downloader cancel];
     }
     onFail:^(NSError *error)
      {
         NSLog(@"auth error=%@",error);
         [downloader cancel];
-        [self.tableView reloadData];
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Timeout",@"") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"OK",@"") otherButtonTitles:nil, nil] show];
     }];
 
 }
