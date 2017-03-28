@@ -126,28 +126,26 @@ allow 1-5 concurrent download for 1 file (like download manager)
 
 #Example for using Block
 
--(void)download
-{
-    _requestStringURL=kCloudURL;
-    NSURL *requestURL=[NSURL URLWithString:_requestStringURL];
-    SZDownloader *downloader=[[SZDownloader alloc] initWithURL:requestURL timeout:6.0];
-    [downloader startWithDownloading:^(float progressValue, NSInteger percentage)
-    {
-        NSLog(@"progressValue=%f,percentage=%ld",progressValue,percentage);
-    } onFinished:^(NSData *fileData)
-    {
-        NSDictionary *jsonDict=[NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableLeaves error:nil];
-        NSLog(@"jsonDict=%@",jsonDict);
-        [downloader cancel];
-    }
-    onFail:^(NSError *error)
-     {
-        NSLog(@"auth error=%@",error);
-        [downloader cancel];
-    }];
-
-}
-
+-(void)download  
+{  
+    _requestStringURL=kCloudURL;  
+    NSURL *requestURL=[NSURL URLWithString:_requestStringURL];  
+    SZDownloader *downloader=[[SZDownloader alloc] initWithURL:requestURL timeout:6.0];  
+    [downloader startWithDownloading:^(float progressValue, NSInteger percentage)  
+    {  
+        NSLog(@"progressValue=%f,percentage=%ld",progressValue,percentage);  
+    } onFinished:^(NSData *fileData)  
+    {  
+        NSDictionary *jsonDict=[NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableLeaves error:nil];  
+        NSLog(@"jsonDict=%@",jsonDict);  
+        [downloader cancel];  
+    }  
+    onFail:^(NSError *error)  
+     {  
+        NSLog(@"auth error=%@",error);  
+        [downloader cancel];  
+    }];  
+} 
 
 ##Log
 
