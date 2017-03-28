@@ -9,9 +9,7 @@ SZDownloader是一个用于下载文件的小型库。您可以使用Block或Del
 
 ###使用块
 
-[objc] view plain copy 在CODE上查看代码片派生到我的代码片
 SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithString：@“http://myfile.com/file.jpg”] timeout：60];  
-  
 [downloader startWithDownloading：（float progress，NSInteger percentage）{  
   
 //进度条进度  
@@ -27,10 +25,7 @@ SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithSt
 
 遵循SZDownloaderDelegate协议
 
-
-[objc] view plain copy 在CODE上查看代码片派生到我的代码片
 SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithString：@“http://myfile.com/file.jpg”] timeout：60];  
-  
 [downloader startWithDelegate：self];//委托方法是必需的  
   
 - （void）SGDownloadProgress：（float）progress百分比：（NSInteger）percent;   
@@ -71,6 +66,9 @@ SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithSt
 允许下载与进度
 最后，如果您觉得SZDownloader好，请点个star,或者加入进来维护它。O(∩_∩)O谢谢！
 
+
+
+English:
 
 SZDownloader is a small library for downloading file.
 It supported
