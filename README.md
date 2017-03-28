@@ -83,3 +83,5 @@ allow 1-5 concurrent download for 1 file (like download manager)
 Allow Pause and Resume
 
 Allow Download with Progress
+
+Finally,if you think SZDownloader is  good,please star it.thanks you.
