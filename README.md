@@ -7,7 +7,7 @@ SZDownloader是一个用于下载文件的小型库。您可以使用Block或Del
 下载SZDownloader.h和SZDownloader.m并添加到你的项目。
 
 ### 使用块
-``` m
+``` Object-C
 SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithString：@“http://myfile.com/file.jpg”] timeout：60];  
 [downloader startWithDownloading：（float progress，NSInteger percentage）{  
   
@@ -24,7 +24,7 @@ SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithSt
 ### 使用Delegate
 
 遵循SZDownloaderDelegate协议
-```
+``` Object-C
 SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithString：@“http://myfile.com/file.jpg”] timeout：60];  
 [downloader startWithDelegate：self];//委托方法是必需的  
   
