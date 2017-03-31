@@ -116,7 +116,8 @@ Delegate Methods are required
 -(void)SGDownloadProgress:(float)progress Percentage:(NSInteger)percentage;
 -(void)SGDownloadFinished:(NSData*)fileData;
 -(void)SGDownloadFail:(NSError*)error;
-##Todo
+
+## Todo
 
 allow 1-5 concurrent download for 1 file (like download manager)
 
