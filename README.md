@@ -61,8 +61,8 @@ SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithSt
 
 ### 版本0.2
 
-*允许暂停和恢复<br>
-*允许下载与进度<br>
+* 允许暂停和恢复<br>
+* 允许下载与进度<br>
 
 最后，如果您`觉得SZDownloader好`，请`点个star`,或者`加入进来维护`它。O(∩_∩)O谢谢！
 
