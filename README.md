@@ -21,7 +21,7 @@ SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithSt
   
 //失败  
 }];  
-###使用Delegate
+### 使用Delegate
 
 遵循SZDownloaderDelegate协议
 
@@ -61,10 +61,10 @@ SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithSt
 
 ### 版本0.2
 
-允许暂停和恢复<br>
-允许下载与进度<br>
+*允许暂停和恢复<br>
+*允许下载与进度<br>
 
-最后，如果您觉得SZDownloader好，请点个star,或者加入进来维护它。O(∩_∩)O谢谢！
+最后，如果您`觉得SZDownloader好`，请`点个star`,或者`加入进来维护`它。O(∩_∩)O谢谢！
 
 
 ## English:
@@ -148,8 +148,8 @@ allow 1-5 concurrent download for 1 file (like download manager)
 
 ### Version 0.2
 
-Allow Pause and Resume
+* Allow Pause and Resume
 
-Allow Download with Progress
+* Allow Download with Progress
 
 Finally,if you think SZDownloader is  good,please star it or join us to maintain it.thanks you.
