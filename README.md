@@ -3,11 +3,11 @@
 SZDownloader是一个用于下载文件的小型库。您可以使用Block或Delegate下载文件。如果您正在使用TableView，您应该使用Delegate而不是Block。
 
 
-＃＃如何使用
+## 如何使用
 
 下载SZDownloader.h和SZDownloader.m并添加到你的项目。
 
-###使用块
+### 使用块
 
 SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithString：@“http://myfile.com/file.jpg”] timeout：60];  
 [downloader startWithDownloading：（float progress，NSInteger percentage）{  
@@ -34,7 +34,7 @@ SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithSt
 
 允许1-5个并发下载1个文件（如下载管理器）
 
-＃使用块的示例
+### 使用块的示例
 
 [objc] view plain copy 在CODE上查看代码片派生到我的代码片
 -(void)download  
@@ -57,20 +57,17 @@ SZDownloader * downloader = [[SZDownloader alloc] initWithURL：[NSURL URLWithSt
         [downloader cancel];  
     }];  
 }  
-##更新日志
+## 更新日志
 
-###版本0.2
+### 版本0.2
 
-允许暂停和恢复
-
-允许下载与进度
-
+允许暂停和恢复<br>
+允许下载与进度<br>
 
 最后，如果您觉得SZDownloader好，请点个star,或者加入进来维护它。O(∩_∩)O谢谢！
 
 
-
-English:
+## English:
 
 SZDownloader is a small library for downloading file.
 It supported
@@ -80,7 +77,7 @@ Delegate
 ARC
 You can use Block or Delegate for downloading the file. If you are using with TableView, you should use Delegate instead of Block.
 
-##How to use
+## How to use
 
 Put
 
@@ -88,7 +85,7 @@ SZDownloader.h
 SZDownloader.m
 to your project.
 
-###for using Block
+### for using Block
 
 SZDownloader *downloader = [[SZDownloader alloc] initWithURL:[NSURL URLWithString:@"http://myfile.com/file.jpg"] timeout:60];
 
@@ -106,7 +103,7 @@ SZDownloader *downloader = [[SZDownloader alloc] initWithURL:[NSURL URLWithStrin
 	//on fail
 
 }];
-###for using Delegate put SZDownloader delegate at .h file
+### for using Delegate put SZDownloader delegate at .h file
 
 @interface progressCell : UITableViewCell <SZDownloaderDelegate>
 in .m file
@@ -124,7 +121,7 @@ Delegate Methods are required
 allow 1-5 concurrent download for 1 file (like download manager)
 
 
-#Example for using Block
+# Example for using Block
 
 -(void)download  
 {  
@@ -147,9 +144,9 @@ allow 1-5 concurrent download for 1 file (like download manager)
     }];  
 } 
 
-##Log
+## Log
 
-###Version 0.2
+### Version 0.2
 
 Allow Pause and Resume
 
